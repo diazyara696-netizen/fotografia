@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fotografia Callejera</title>
+        <style>
+            body {
+                background-image: url("4144018141d6c64447b44f8df78ef2cf.jpg");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                background-color: rgb(5, 3, 44);
+                font-family: "courier new", monospace;
+                color:rgb(65, 87, 110);
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                line-height: 1.6;
+            }
+            h1 {
+                color: rgb(221, 73, 73);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-shadow: 2px 4px 4px rgb(17, 9, 66);
+            }
+            h2 {
+                color: rgb(156, 255, 234);
+            }
+            nav {
+                background-color: rgb(20, 20, 60);
+                padding: 12px 20px;
+                border-radius: 8px;
+                display: inline-block;
+                position: sticky;
+                top: 10px;
+                z-index: 10;
+            }
+            nav a {
+                color: rgb(215, 210, 219);
+                margin-right: 15px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            nav a:hover {
+                text-decoration: underline;
+            }
+            .galeria {
+                display: flex;
+                overflow-x: auto;
+                gap: 20px;
+                padding: 20px 0;
+                scroll-snap-type: x mandatory;
+            }
+            .foto-item {
+                flex: 0 0 auto;
+                text-align: center;
+                scroll-snap-align: start 
+            }
+            .foto-item p {
+                color: rgb(255, 0, 0);
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            .foto-item img {
+                display: block;
+                width: 300px;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+                transition: transform 0.3s ease;
+            }
+            .foto-item img:hover {
+                transform: scale(1.05);
+            }
+            .galeria::-webkit-scrollbar {
+                height: 8px;
+            }
+            .galeria::-webkit-scrollbar-thumb {
+                background-color: bisque;
+                border-radius: 4px;
+            }
+            .seccion {
+                position: relative;
+                border: 2px solid dodgerblue;
+                border-radius: 12px;
+                padding: 25px 20px 15px 20px;
+                margin: 30px 0;
+                background-color: rgba(0, 0, 0, 0.35)
+            }
+            @keyframes aparecer {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .seccion{
+                animation: aparecer 0.8s ease forwards;
+            }
+
+            .etiqueta {
+            position: absolute;
+            top: -16px;
+            left: 20px;
+            background-color: rgb(25, 0, 225);
+            color:black;
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            }
+            @media (max-width: 600px) {
+                body {
+                    padding: 10px;
+                    background-attachment: scroll;
+                }
+                h1 {
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                }
+                nav {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    align-items: center;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                nav a {
+                    margin: 0;
+                    font-size: 0.85rem;
+                }
+                .seccion {
+                    padding: 20px 12px 12px 12px;
+                    margin: 20px 0;
+                }
+                .etiqueta {
+                    font-size: 0.8rem;
+                    padding: 4px 10px;
+                }
+                .foto-item img {
+                    width: 220px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <nav>
+            <a href="#fotosdecarretera">Fotos de Carretera</a>
+            <a href="#fotosdecalle">Foto de Calle</a>
+            <a href="#edificios">Edificios</a>
+        </nav>
+
+        <h1>Galeria</h1>
+        
+        <div class="seccion" id="fotosdecarretera">
+        <span class="etiqueta">Fotos de carretera</span>
+        <div class="galeria">
+            <div class="foto-item">
+                <p>Mall San Pedro</p>
+                <img src="carretera-1.jpg" alt="Mall San Pedro">
+            </div>
+        <div class="foto-item">
+            <p>Puente</p>
+            <img src="carretera-2.jpg" alt="Puente">
+        </div>
+        <div class="foto-item">
+            <p>Carro estacionado</p>
+            <img src="carretera-3.jpg" alt="Carro estacionado">
+        </div>
+        <div class="foto-item">
+            <p>montanas</p>
+            <img src="carretera-4.jpg" alt="montanas">
+        </div>
+        <div class="foto-item">
+            <p>la caja</p>
+            <img src="carretera-5.jpg" alt="La caja">
+        </div>
+        </div>
+        </div>
+
+        <div class="seccion" id="fotosdecalle">
+        <span class="etiqueta">Fotos de Calle</span>
+        <div class="galeria">
+            <div class="foto-item">
+                <p>casa celeste</p>
+                <img src="calle-2.jpg" alt="casa celeste">
+            </div>
+            <div class="foto-item">
+                <p>casa ancha</p>
+                <img src="calle-3.jpg" alt="casa larga">
+            </div>
+            <div class="foto-item">
+                <p>Mambo</p>
+                <img src="calle-5.jpg" alt="Mambo">
+            </div>
+            <div class="foto-item">
+                <p>U</p>
+                <img src="calle-7.jpg" alt="U">
+            </div>
+            <div class="foto-item">
+                <p>cera</p>
+                <img src="calle-9.jpg" alt="cera">
+            </div>
+        </div>
+        </div>
+        
+
+        <div class="seccion" id="edificios">
+            <span class="etiqueta">Edificios</span>
+        <div class="galeria">
+            <div class="foto-item">
+                <p>la caja</p>
+                <img src="edificioas-1.jpg" alt="la caja">
+            </div>
+            <div class="foto-item">
+                <p>la caja</p>
+                <img src="edificioas-2.jpg" alt="la caja">
+            </div>
+            <div class="foto-item">
+                <p>Hotel</p>
+                <img src="edificios-4.jpg" alt="Hotel">
+            </div>
+            <div class="foto-item">
+                <p>registro civil</p>
+                <img src="edificios-7.jpg" alt="registro civil">
+            </div>
+            <div class="foto-item">
+                <p>edificio celeste</p>
+                <img src="edificioas-6.jpg" alt="edificio celeste">
+            </div>
+        </div>
+        </div>
+
+                <footer style="text-align:center; margin-top:40px; color:dodgerblue;">
+            <p> 2026 fotografia callejera</p>
+        </footer>
+    </body>
+</html>
